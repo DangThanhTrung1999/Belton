@@ -170,6 +170,7 @@ html {
 /* end content1  */
 .section_img {
     width: 80%;
+    height: 1200px;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -179,43 +180,52 @@ html {
 
 .section_img .item {
     width: 49%;
+    height: 48%;
     position: relative;
     overflow: hidden;
     box-sizing: border-box;
+    background-size: cover;
+    margin-top: 20px;
+    transition: 0.4s;
+    object-fit: cover;
 }
-.section_img .item .layer3{
+.section_img .item:hover {
+    transform: scale(1.1);
+}
+.section_img .item .layer3 {
     background-color: black;
     position: absolute;
     opacity: 0;
     width: 100%;
     height: 100%;
-    top:0;
+    top: 0;
     left: 0;
     transition: 0.4s;
     z-index: 2;
 }
-.section_img .item:hover .layer3{
-    background-color: black;
-    position: absolute;
+
+.section_img .item:hover .layer3 {
     opacity: 0.6;
-    width: 100%;
-    height: 100%;
-    top:0;
-    left: 0;
-    z-index: 2;
 }
-.section_img .item img {
-    max-width: 100%;
-    max-height: 100%;
-    margin-top: 20px;
-    transition: transform 0.5s linear;
+
+.section_img .item1 {
+    background: url(./img/1.jpg);
 }
-.section_img .item:hover img {
-    margin-top: 20px;
-    transform: scale(1.1);
-    overflow: hidden;
+
+.section_img .item2 {
+    background: url(./img/2.jpg);
 }
-.section_img .item .layer2{
+
+.section_img .item3 {
+    background: url(./img/3.jpg);
+}
+
+.section_img .item4 {
+    background: url(./img/4.jpg);
+}
+
+
+.section_img .item .layer2 {
     z-index: 3;
     color: white;
     position: absolute;
@@ -224,7 +234,8 @@ html {
     transition: 0.4s;
     opacity: 0;
 }
-.section_img .item:hover .layer2{
+
+.section_img .item:hover .layer2 {
     z-index: 3;
     color: white;
     position: absolute;
@@ -232,14 +243,17 @@ html {
     top: 50%;
     opacity: 1;
 }
-.image h1{
+
+.image h1 {
     padding-top: 50px;
     text-align: center;
     color: white;
 }
-.image{
+
+.image {
     background: black;
 }
+
 @media screen and (max-width:768px) {
     .section_img .item {
         width: 100%;
