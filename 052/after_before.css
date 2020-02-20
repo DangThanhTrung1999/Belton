@@ -1,0 +1,30 @@
+.menu{}
+.menu ul{
+    display: flex;
+    list-style: none;
+}
+.menu ul li{}
+.menu ul li a{
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #414141;
+    padding: 10px 20px;
+}
+.menu ul li:not(:last-child):after{
+    content: '/';
+    padding-left:10px ;
+}
+.nut{
+    width: 100px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    border-radius: 30px;
+    background-image: -webkit-linear-gradient(left,#ffcd4a,#f15b26);
+}
+.nut:hover{
+    background-image: -webkit-linear-gradient(left,#44f74d,#fa3868);
+}
