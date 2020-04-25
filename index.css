@@ -91,8 +91,6 @@ html {
     margin: auto;
 }
 
-.text_banner .content .small {}
-
 .text_banner .content h1 {
     font-family: var(--font1);
     font-size: var(--size1);
@@ -170,28 +168,38 @@ html {
 /* end content1  */
 .section_img {
     width: 80%;
-    height: 1200px;
+    height: 1300px;
     margin: auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     flex-direction: row;
+    overflow: hidden;
 }
 
 .section_img .item {
     width: 49%;
-    height: 48%;
+    height: auto;
     position: relative;
-    overflow: hidden;
-    box-sizing: border-box;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
     background-size: cover;
     margin-top: 20px;
     transition: 0.4s;
     object-fit: cover;
 }
-.section_img .item:hover {
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .25s linear;
+}
+
+.item:hover img {
     transform: scale(1.1);
 }
+
 .section_img .item .layer3 {
     background-color: black;
     position: absolute;
@@ -207,23 +215,6 @@ html {
 .section_img .item:hover .layer3 {
     opacity: 0.6;
 }
-
-.section_img .item1 {
-    background: url(./img/1.jpg);
-}
-
-.section_img .item2 {
-    background: url(./img/2.jpg);
-}
-
-.section_img .item3 {
-    background: url(./img/3.jpg);
-}
-
-.section_img .item4 {
-    background: url(./img/4.jpg);
-}
-
 
 .section_img .item .layer2 {
     z-index: 3;
@@ -254,11 +245,63 @@ html {
     background: black;
 }
 
+.image .view-all {
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.image .view-all::before {
+    content: "\f178";
+    position: relative;
+    left: -20px;
+    opacity: 1;
+    transition: 0.5s;
+    font: normal normal normal 14px/1 FontAwesome;
+}
+
+.image .view-all:hover:before {
+    left: -2px;
+    opacity: 1;
+}
+
 @media screen and (max-width:768px) {
     .section_img .item {
         width: 100%;
         position: relative;
         overflow: hidden;
         box-sizing: border-box;
+    }
+}
+
+/* --------sponsor--------- */
+.sponsor{
+    width: 80%;
+    margin: 0 auto;
+}
+.sponsor-image {
+    padding: 50px 0;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.sponsor-image img {
+    width: 12%;
+    margin: 5px;
+    overflow: hidden;
+}
+.sponsor-text{
+    display: flex;
+}
+.sponsor-text h3{
+    text-transform: uppercase;
+}
+@media screen and (max-width:768px) {
+    .sponsor-image img {
+        width: 80%;
+        margin: 0 auto;
     }
 }
