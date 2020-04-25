@@ -51,8 +51,6 @@ html {
     display: inline-block;
 }
 
-.banner_top ._3cot ._1cot.cottrai a {}
-
 .banner_top ._3cot ._1cot.cottrai a:hover {
     color: aquamarine;
 }
@@ -246,6 +244,7 @@ html {
 }
 
 .image .view-all {
+    margin: 50px 0 100px 0;
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -275,10 +274,12 @@ html {
 }
 
 /* --------sponsor--------- */
-.sponsor{
+.sponsor {
     width: 80%;
+    height: auto;
     margin: 0 auto;
 }
+
 .sponsor-image {
     padding: 50px 0;
     display: flex;
@@ -293,15 +294,129 @@ html {
     margin: 5px;
     overflow: hidden;
 }
-.sponsor-text{
+
+.sponsor-description {
+    padding: 80px 0;
     display: flex;
+    flex-wrap: wrap;
+    text-align: center;
 }
-.sponsor-text h3{
+
+.sponsor-description h3 {
+    margin: auto;
     text-transform: uppercase;
+    width: 20%;
+    font-family: var(--font2);
+    font-style: var(--size2);
+    font-size: 35px;
+    color: black;
+    font-weight: 700;
 }
+
+.sponsor-description p:nth-child(2) {
+    box-sizing: border-box;
+    margin: auto 40px;
+    width: 60%;
+    font-family: var(--font2);
+    font-size: var(--size3);
+    color: var(--color2);
+}
+
+.sponsor-description p:nth-child(3) {
+    margin: auto;
+    text-align: right;
+    width: 20%;
+    font-family: var(--font2);
+    font-size: var(--size3);
+    color: var(--color2);
+}
+
+.sponsor-description p:nth-child(3)::before {
+    content: "\f178";
+    position: relative;
+    left: -20px;
+    opacity: 1;
+    transition: 0.5s;
+    font: normal normal normal 14px/1 FontAwesome;
+}
+
+.sponsor-description p:nth-child(3):hover::before {
+    left: -5px;
+}
+
 @media screen and (max-width:768px) {
     .sponsor-image img {
-        width: 80%;
+        width: 60%;
         margin: 0 auto;
+    }
+
+    .sponsor-description h3 {
+
+        width: 100%;
+    }
+
+    .sponsor-description p:nth-child(2) {
+        width: 100%;
+    }
+
+    .sponsor-description p:nth-child(3) {
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+/* ------------footer--------- */
+.footer-parent {
+    background: black;
+    height: 100px;
+}
+
+.footer {
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    color: white;
+}
+
+.footer-left {
+    width: 50%;
+}
+
+.footer-left p {
+    transform: translate(0%, 200%);
+}
+
+.footer-right {
+    height: 100%;
+    width: 50%;
+    text-align: right;
+}
+
+.footer-right p {
+    transform: translate(0%, 200%);
+}
+
+.footer-right i {
+    color: greenyellow;
+}
+
+@media screen and (max-width:768px) {
+    .footer-parent {
+        height: 200px;
+        box-sizing: border-box;
+    }
+
+    .footer-right,
+    .footer-left {
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .footer-right p,
+    .footer-left p {
+        transform: translate(0%, 0%);
     }
 }
